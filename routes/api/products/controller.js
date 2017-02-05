@@ -1,8 +1,21 @@
 'use strict';
-
+const productAggregator = require('./helpers/aggregator');
 module.exports = {
     getProducts(req, res, next) {
-        return res.send('Get products by thier items and thier image grouped bt sku');
+        productAggregator.groupProductBySku()
+            .then(products => {
+                return res.send(200, {
+                    status: 200,
+                    data: products
+                });
+            })
+            .catch(err => {
+                return res.send(500, {
+                    status: 500,
+                    message: 'Something went wrong',
+                    errors: err.message
+                });
+            });
     },
     createNewProduct(req, res, next) {
         return res.send('Create a new Product');
