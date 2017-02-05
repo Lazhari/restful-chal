@@ -14,11 +14,11 @@ module.exports = {
      * @apiSuccess {Object[]} data.products._id product unique ID.
      * @apiSuccess {Object[]} data.products.name product name.
      * @apiSuccess {Object[]} data.products.items product items list.
-     * @apiSuccess {Number} data.price Item price.
-     * @apiSuccess {String} data.product_sku stock keeping unit.
-     * @apiSuccess {String} data.product_name Product name.
-     * @apiSuccess {String} data.color Item Color.
-     * @apiSuccess {String} data.image_url Item image url.
+     * @apiSuccess {Number} data.products.items.price Item price.
+     * @apiSuccess {String} data.products.items.product_sku stock keeping unit.
+     * @apiSuccess {String} data.products.items.product_name Product name.
+     * @apiSuccess {String} data.products.items.color Item Color.
+     * @apiSuccess {String} data.products.items.image_url Item image url.
      *
      * @apiSuccessExample Success-Response:
      *     HTTP/1.1 200 OK
