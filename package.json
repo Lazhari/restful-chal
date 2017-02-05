@@ -6,7 +6,11 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "test": "mocha --reporter spec",
-    "apidoc": "apidoc -i ./routes -o ./api-doc"
+    "apidoc": "apidoc -i ./routes -o ./api-doc",
+    "fakeproducts": "node ./mocks/products.js",
+    "fakeimages": "node ./mocks/images.js",
+    "fakecolors": "node ./mocks/colors.js",
+    "fakeitems": "node ./mocks/items.js"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
