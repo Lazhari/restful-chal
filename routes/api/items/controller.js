@@ -9,7 +9,7 @@ module.exports = {
          * @apiDescription Get all items not grouped. An items also includes the properties of the product it
 belongs to.
          * @apiName GetItems
-         * @apiGroup items
+         * @apiGroup Items
          *
          *
          * @apiSuccess {Number} status The response status.
