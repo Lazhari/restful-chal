@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const lusca = require('lusca');
 const compression = require('compression');
 const expressNunjucks = require('express-nunjucks');
+const expressValidator = require('express-validator');
 
 const config = require('./enviroment');
 
@@ -46,6 +47,23 @@ module.exports = function (app) {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({
         extended: false
+    }));
+    // Express Validator middlware configuration
+    app.use(expressValidator({
+        errorFormatter: function(param, msg, value) {
+            var namespace = param.split('.'),
+                root = namespace.shift(),
+                formParam = root;
+
+            while (namespace.length) {
+                formParam += '[' + namespace.shift() + ']';
+            }
+            return {
+                param: formParam,
+                msg: msg,
+                value: value
+            };
+        }
     }));
     app.use(compression());
     app.use(express.static(path.join(__dirname, '../public')));

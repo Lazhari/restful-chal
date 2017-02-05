@@ -13,6 +13,7 @@
     "debug": "~2.2.0",
     "express": "~4.13.4",
     "express-nunjucks": "^2.1.2",
+    "express-validator": "^3.1.2",
     "lodash": "^4.17.4",
     "lusca": "^1.4.1",
     "morgan": "~1.7.0",
