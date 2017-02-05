@@ -10,7 +10,7 @@ const ColorSchema = new Schema({
         red: 'Product'
     },
     label: String,
-    image: {
+    image_id: {
         type: ObjectId,
         ref: 'Image'
     },
