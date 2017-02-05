@@ -12,6 +12,7 @@ const ItemSchema = new Schema({
     product_name: String,
     product_sku: String,
     size: String,
+    price: Number,
     color: {
         type: ObjectId,
         ref: 'Color'
