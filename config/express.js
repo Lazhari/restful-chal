@@ -6,6 +6,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const lusca = require('lusca');
 const expressNunjucks = require('express-nunjucks');
 
 const config = require('./enviroment');
@@ -26,7 +27,20 @@ module.exports = function (app) {
         watch: isDev,
         noCache: isDev
     });
-
+    // Check list Security
+    app.use(lusca({
+        csrf: false,
+        xframe: 'DENY',
+        p3p: 'ABCDEF',
+        hsts: {
+            maxAge: 31536000,
+            includeSubDomains: true,
+            preload: true
+        },
+        xssProtection: true,
+        nosniff: true
+    }));
+    app.disable('x-powered-by');
     app.use(logger('dev'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({
