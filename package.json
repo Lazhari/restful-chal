@@ -25,8 +25,11 @@
   },
   "devDependencies": {
     "apidoc": "^0.17.5",
+    "async": "^2.1.4",
     "chai": "^3.5.0",
+    "faker": "^3.1.0",
     "mocha": "^3.2.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "pace": "0.0.4"
   }
 }
