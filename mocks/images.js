@@ -30,7 +30,7 @@ mongoose.connect(config.mongo.uri, (err) => {
                 } else {
                     console.log('Images has been added to database');
                 }
-                process.exit(1);
+                process.exit(0);
             });
         });
     }

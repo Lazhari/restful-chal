@@ -34,7 +34,7 @@ mongoose.connect(config.mongo.uri, (err) => {
                 } else {
                     console.log('Products has been added to database');
                 }
-                process.exit(1);
+                process.exit(0);
             });
         });
     }

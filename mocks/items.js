@@ -67,7 +67,7 @@ mongoose.connect(config.mongo.uri, (err) => {
                     } else {
                         console.log('Done');
                     }
-                    process.exit(1);
+                    process.exit(0);
                 });
             })
             .catch(err => {
