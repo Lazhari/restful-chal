@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "apidoc": "apidoc -i ./routes -o ./api-doc"
   },
   "dependencies": {
     "body-parser": "~1.15.1",

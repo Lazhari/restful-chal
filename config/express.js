@@ -77,7 +77,7 @@ module.exports = function (app) {
     app.use(compression());
     app.use(express.static(path.join(__dirname, '../public')));
     // TODO generate API doc and module doc
-    //app.use('/doc', auth, express.static(path.join(__dirname, '../api-doc')));
+    app.use('/doc', express.static(path.join(__dirname, '../api-doc')));
     //app.use('/modules-doc', auth, express.static(path.join(__dirname, '../modules-doc')));
 
     // Routing Systems
