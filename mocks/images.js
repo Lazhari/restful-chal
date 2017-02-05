@@ -13,10 +13,10 @@ const Image = require('../models/image');
 * Create new fake fashion image
 */
 const createFakeImage = function(iteration, done) {
-    const product =  {
+    const image =  {
         url: faker.image.fashion()
     };
-    return done(null, product);
+    return done(null, image);
 };
 
 mongoose.connect(config.mongo.uri, (err) => {
