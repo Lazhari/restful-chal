@@ -3,5 +3,5 @@
     "version": "0.1.0",
     "description": "Fashion Cloud RESTful Challenge using Express and MongoDB",
     "title": "Fashion Cloud Challenge API",
-    "url": "http://localhost:3000"
+    "url": "https://fashion-cloud-chal.herokuapp.com"
 }
