@@ -10,12 +10,21 @@ const lusca = require('lusca');
 const compression = require('compression');
 const expressNunjucks = require('express-nunjucks');
 const expressValidator = require('express-validator');
+const mongoose = require('mongoose');
 
 const config = require('./enviroment');
 
 var basicAuth = require('basic-auth');
 
 module.exports = function (app) {
+    // Connect to database
+    mongoose.connect(config.mongo.uri, (err) => {
+        if(err) {
+            console.error(`Connection to database not established, please check your MongoDB connection maybe the reason is ${err.message}`);
+        } else {
+            console.info(`Connection to db has been successfully established To, ${config.mongo.uri}`);
+        }
+    });
 
     // view engine setup
     // This is where all the magic happens!
