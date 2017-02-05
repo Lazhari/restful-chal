@@ -7,6 +7,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const lusca = require('lusca');
+const compression = require('compression');
 const expressNunjucks = require('express-nunjucks');
 
 const config = require('./enviroment');
@@ -46,6 +47,7 @@ module.exports = function (app) {
     app.use(bodyParser.urlencoded({
         extended: false
     }));
+    app.use(compression());
     app.use(express.static(path.join(__dirname, '../public')));
     // TODO generate API doc and module doc
     //app.use('/doc', auth, express.static(path.join(__dirname, '../api-doc')));
