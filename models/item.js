@@ -9,8 +9,6 @@ const ItemSchema = new Schema({
         type: ObjectId,
         red: 'Product'
     },
-    product_name: String,
-    product_sku: String,
     size: String,
     price: Number,
     color: {
