@@ -47,7 +47,6 @@ belongs to.
          *        }, ...]
          *    }
          *
-         * @apiError ServerError.
          *
          * @apiErrorExample Error-Response:
          *     HTTP/1.1 500 Not Found
