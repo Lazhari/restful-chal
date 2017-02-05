@@ -18,7 +18,7 @@ module.exports = {
      *        "url": "https://uniqlo.scene7.com/is/image/UNIQLO/goods_67_146209?$prod$"
      *    }
      *
-     * @apiError UserNotFound The id of the Image was not found.
+     * @apiError ImageNotFound The id of the Image was not found.
      *
      * @apiErrorExample Error-Response:
      *     HTTP/1.1 404 Not Found
