@@ -22,3 +22,12 @@ Then, run the server in development mode.
 $ npm run dev
 Express server listening on http://localhost:3000, in development mode
 ```
+
+## Generate Mocks data
+Please execute the command in this order
+```bash
+npm run fakeproducts # generate fake products
+npm run fakeimages # generate fake images
+npm run fakecolor # generate fake color
+npm run fakeitems # generate fake items
+```
