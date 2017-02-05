@@ -1,5 +1,7 @@
 # Fashion Cloud RESTful API challenge
-> Fashion Cloud RESTful API challenge
+> Fashion Cloud RESTful API challenge using Express and MongoDB
+* Check out the API on Heroku: https://fashion-cloud-chal.herokuapp.com
+* Check out the API doc: https://fashion-cloud-chal.herokuapp.com/doc/
 
 # Start Application
 [Node.js](https://nodejs.org/) is required
