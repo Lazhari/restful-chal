@@ -9,6 +9,6 @@ router
     .get('/', controller.getProducts)
     .post('/', controller.createNewProduct)
     .delete('/:productId', controller.deleteProduct)
-    .put('/:productId', controller.updateProduct)
+    .put('/:productId', controller.updateProduct);
 
 module.exports = router;
